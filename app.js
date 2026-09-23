@@ -1,4 +1,8 @@
-(function(){
+document.body.innerHTML = `
+<h1>Приложение загрузилось</h1>
+<p>Vercel + Bitrix24 OK</p>
+`;
+/*(function(){
 
 "use strict";
 
@@ -51,4 +55,4 @@ BX24.init(function(){
 });
 
 
-})();
+})();"*/
