@@ -3,26 +3,33 @@
 "use strict";
 
 
-function show(data){
-
-document.body.innerHTML = `
-<h2>Placement debug</h2>
-<pre style="font-size:14px">
+function output(data)
+{
+    document.body.innerHTML =
+    `
+    <div style="
+        padding:20px;
+        font-family:Arial;
+        white-space:pre-wrap;
+    ">
+    <h2>Placement debug</h2>
+    <pre>
 ${JSON.stringify(data,null,2)}
-</pre>
-`;
-
+    </pre>
+    </div>
+    `;
 }
 
 
 
-if(typeof BX24 === "undefined"){
+if(typeof BX24 === "undefined")
+{
 
-show({
-error:"BX24 object not found"
-});
+    output({
+        error:"BX24 не найден"
+    });
 
-return;
+    return;
 
 }
 
@@ -30,14 +37,15 @@ return;
 
 BX24.init(function(){
 
-
-BX24.placement.info(function(info){
-
-
-show(info);
+    console.log("BX24 init OK");
 
 
-});
+    BX24.placement.info(function(info){
+
+        output(info);
+
+
+    });
 
 
 });
