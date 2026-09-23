@@ -1,4 +1,10 @@
-(function () {
+alert("APP JS ЗАГРУЖЕН");
+
+document.body.innerHTML = `
+<h1>JS работает</h1>
+<p>Версия диагностики 001</p>
+`;
+/*(function () {
 
     "use strict";
 
@@ -70,7 +76,7 @@ ${JSON.stringify(data, null, 2)}
 
 
 
-})();
+})();*/
 /*(function () {
 
 "use strict";
